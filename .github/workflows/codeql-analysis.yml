@@ -8,8 +8,8 @@ on:
     - cron: '0 4 * * 3'
 jobs:
   analyze:
-    name: Analyze
-      runs-on: [ubuntu-latest]
+    - name: Analyze
+      runs-on: ubuntu-latest
       permissions:
         actions: read
         contents: read
