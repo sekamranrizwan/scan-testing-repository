@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  analyze:
+  CodeQL-Build:
     name: Analyze
     runs-on: ubuntu-latest
     permissions:
