@@ -4,8 +4,9 @@ on:
   push:
     branches: [main]
   pull_request:
-    # The branches below must be a subset of the branches above
-    - cron: '36 6 * * 3'
+    branches: [main]
+  schedule:
+    - cron: '0 4 * * 3'
 
 jobs:
   analyze:
