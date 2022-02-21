@@ -2,15 +2,13 @@ name: 'CodeQL'
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - '**.js'
   pull_request:
-    branches: [main]
+    branches: [master]
     paths:
       - '**.js'
-  schedule:
-    - cron: '0 8 * * 4'
 
 jobs:
   analyze:
