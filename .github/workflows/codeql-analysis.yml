@@ -35,6 +35,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+       - run: git checkout HEAD^2
+         if: ${{ github.event_name == 'pull_request' }}
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: npm install
@@ -51,7 +54,8 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
         with:
-          languages: ${{ matrix.language }}
+        config-file: ./.github/codeql-config.yml
+        
       # Perform the codeql analysis.
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
