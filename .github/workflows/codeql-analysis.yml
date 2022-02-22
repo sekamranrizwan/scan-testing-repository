@@ -36,3 +36,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: npm run lint
+
+      # Initializes the CodeQL tools for scanning.
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: ${{ matrix.language }}
