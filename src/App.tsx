@@ -14,7 +14,10 @@ function App() {
   };
   return (
     <div className='App'>
-      <input type='search' value='Attacker ' /> <script> {customPropsControledByAttacker} </script>{' '}
+      <input type='search' value='Attacker ' />{' '}
+      <script>
+        <div {...customPropsControledByAttacker} />
+      </script>{' '}
     </div>
   );
 }
