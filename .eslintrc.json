@@ -19,6 +19,6 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "max-lines": ["error", { "max": 10, "skipBlankLines": true, "skipComments": true }]
+    "max-lines": ["error", { "max": 30, "skipBlankLines": true, "skipComments": true }]
   }
 }
