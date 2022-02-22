@@ -16,19 +16,18 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  analyse:
+  analyze:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        language: ['javascript']
 
     permissions:
       actions: read
       contents: read
       security-events: write
+
+    strategy:
+      matrix:
+        language: ['javascript']
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
