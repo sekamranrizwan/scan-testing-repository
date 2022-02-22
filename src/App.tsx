@@ -1,9 +1,14 @@
 import React from 'react';
 function App() {
-  const username = "<script><img onerror='alert(\"Hacked!\")' src='invalid-image' /></script>";
+  function setLanguageOptions() {
+    const href = document.location.href,
+      deflt = href.substring(href.indexOf('default=') + 8);
+    document.write('<OPTION value=1>' + deflt + '</OPTION>');
+    document.write('<OPTION value=2>English</OPTION>');
+  }
   return (
     <div className='App'>
-      <input type='search' value='Attacker ' /> {username}
+      <input type='search' value='Attacker ' /> <script> {setLanguageOptions()} </script>{' '}
     </div>
   );
 }
